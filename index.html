@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Built For Shauna Wekherlien (Tax Goddess) · AG1 Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0805;--bg-2:#110e0a;--surface:#1a160f;--surface-2:#221c12;--line:rgba(201,151,58,.15);--line-2:rgba(201,151,58,.3);--text:#f8f3e8;--muted:#a69885;--gold:#c9973a;--gold-2:#e2b96a;--gold-3:#f0d79a;--red:#c97a3a}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(201,151,58,.025) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-30%;right:-10%;width:70%;height:80%;background:radial-gradient(circle,rgba(201,151,58,.07) 0%,transparent 60%);pointer-events:none;z-index:0}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.container-narrow{max-width:820px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{padding:24px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,8,5,.94);backdrop-filter:blur(14px);z-index:100}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:.18em;text-transform:uppercase}
+.nav-cta{padding:10px 22px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
+section{padding:80px 0}
+.hero{padding:100px 0 60px;text-align:center}
+.eyebrow{display:inline-block;padding:6px 16px;background:rgba(201,151,58,.1);border:1px solid rgba(201,151,58,.3);border-radius:24px;font-size:12px;font-weight:600;color:var(--gold-2);letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+h1{font-size:clamp(40px,5.6vw,64px);font-weight:800;line-height:1.06;letter-spacing:-.03em;margin-bottom:24px}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 50%,var(--gold-2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h2{font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:18px;margin-bottom:48px;max-width:680px}
+h3{font-size:22px;font-weight:700;color:var(--text);margin-bottom:10px}
+h4{font-size:14px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.14em;margin:24px 0 12px;font-weight:700}
+p{color:var(--muted);font-size:17px;max-width:680px}
+.hero p{font-size:19px;margin:0 auto 40px;color:var(--muted)}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.meta-item{text-align:center}
+.meta-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:10px}
+.meta-value{font-size:20px;color:var(--text);font-weight:700;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.prose p{margin-bottom:18px;font-size:17px}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--text);font-weight:600}
+.prose blockquote{margin:24px 0;padding:20px 26px;background:rgba(201,151,58,.06);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;font-size:18px;color:var(--text);font-style:italic;line-height:1.55}
+.prose blockquote .quote-attr{display:block;margin-top:10px;font-size:13px;color:var(--gold-2);font-style:normal;letter-spacing:.05em}
+.signature{margin-top:32px;font-size:15px;color:var(--gold-2);font-style:italic}
+.gap-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+.gap-card{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;padding:32px;transition:.3s}
+.gap-card:hover{border-color:var(--line-2)}
+.gap-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px}
+.gap-tag.critical{background:rgba(201,122,58,.15);color:var(--red);border:1px solid rgba(201,122,58,.3)}
+.gap-tag.high{background:rgba(201,151,58,.12);color:var(--gold-2);border:1px solid rgba(201,151,58,.3)}
+.gap-card h3{margin-bottom:14px}
+.gap-card p{font-size:16px;margin-bottom:14px}
+.gap-card .fix{padding-top:14px;border-top:1px solid var(--line);font-size:15px}
+.gap-card .fix strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;font-size:12px;display:block;margin-bottom:6px}
+.market-table{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.market-row{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:24px 28px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:12px;align-items:start}
+.market-name{font-weight:700;color:var(--text);font-size:17px}
+.market-price{font-size:13px;color:var(--gold-2);margin-top:4px;letter-spacing:.05em}
+.market-note{font-size:15px;color:var(--muted);line-height:1.6}
+.market-callout{margin-top:24px;padding:24px 28px;background:rgba(201,151,58,.06);border:1px solid var(--line-2);border-radius:12px;font-size:16px;color:var(--text)}
+.market-callout strong{color:var(--gold-2)}
+.phase-block{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line)}
+.phase-block:last-child{border-bottom:0}
+.phase-num{font-family:monospace;font-size:14px;color:var(--gold-2);letter-spacing:.15em;font-weight:700}
+.phase-num .month{display:block;color:var(--muted);font-size:11px;margin-top:6px;letter-spacing:.1em}
+.phase-content h3{margin-bottom:14px;font-size:24px}
+.phase-content ul{list-style:none;padding:0;margin:14px 0}
+.phase-content li{padding:6px 0 6px 22px;position:relative;color:var(--muted);font-size:16px}
+.phase-content li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:14px}
+.phase-content .rev-line{margin-top:18px;padding:14px 18px;background:rgba(201,151,58,.06);border-left:2px solid var(--gold);border-radius:0 8px 8px 0;font-size:15px;color:var(--text)}
+.phase-content .rev-line strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.1em;font-size:11px;display:block;margin-bottom:4px;font-weight:700}
+.rev-table{margin-top:8px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:14px;padding:32px;overflow:hidden}
+.rev-row{display:grid;grid-template-columns:1fr auto;gap:32px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.rev-row:last-of-type{border-bottom:0}
+.rev-stream{color:var(--muted);font-size:16px}
+.rev-stream strong{color:var(--text);font-weight:600;display:block;margin-bottom:2px}
+.rev-amount{font-size:22px;font-weight:700;color:var(--gold-2);font-family:monospace;white-space:nowrap}
+.rev-total{margin-top:18px;padding-top:24px;border-top:2px solid var(--line-2);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:baseline}
+.rev-total-label{font-size:14px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+.rev-total-amount{font-size:32px;font-weight:800;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:monospace;white-space:nowrap}
+.rev-note{margin-top:24px;padding:20px 24px;background:rgba(201,151,58,.06);border:1px solid var(--line);border-radius:10px;font-size:15px;color:var(--text)}
+.rev-note strong{color:var(--gold-2)}
+.rev-caveat{margin-top:14px;padding:14px 18px;border:1px dashed var(--line-2);border-radius:8px;font-size:13px;color:var(--muted);font-family:'Inter',sans-serif}
+.rev-caveat strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.12em;font-size:11px;display:block;margin-bottom:4px}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.proof-card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.proof-card h3{font-size:20px;margin-bottom:6px}
+.proof-card .role{font-size:12px;color:var(--gold-2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+.proof-card p{font-size:15px;line-height:1.7}
+.offer-block{padding:48px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:18px}
+.offer-block h3{font-size:24px;margin-bottom:8px}
+.offer-block .scope-intro{color:var(--muted);font-size:16px;margin-bottom:28px}
+.scope-list{list-style:none;padding:0;margin:0}
+.scope-list li{padding:14px 0 14px 36px;position:relative;color:var(--text);font-size:16px;border-bottom:1px solid var(--line)}
+.scope-list li:last-child{border-bottom:0}
+.scope-list li::before{content:'';width:18px;height:18px;border:1.5px solid var(--gold);border-radius:50%;position:absolute;left:0;top:18px;background:rgba(201,151,58,.08)}
+.scope-list li::after{content:'';width:6px;height:10px;border-right:2px solid var(--gold-2);border-bottom:2px solid var(--gold-2);transform:rotate(45deg);position:absolute;left:6px;top:20px}
+.offer-block .price-note{margin-top:32px;padding-top:28px;border-top:1px solid var(--line-2);font-size:15px;color:var(--gold-2);text-align:center}
+.faq-item{border-bottom:1px solid var(--line);padding:0}
+.faq-q{padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:18px;font-weight:600;color:var(--text);transition:.2s}
+.faq-q:hover{color:var(--gold-2)}
+.faq-toggle{width:24px;height:24px;border-radius:50%;border:1px solid var(--line-2);position:relative;flex-shrink:0;transition:.3s}
+.faq-toggle::before,.faq-toggle::after{content:'';position:absolute;background:var(--gold-2);top:50%;left:50%;transition:.3s}
+.faq-toggle::before{width:10px;height:1.5px;transform:translate(-50%,-50%)}
+.faq-toggle::after{width:1.5px;height:10px;transform:translate(-50%,-50%)}
+.faq-item.open .faq-toggle::after{opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:.4s}
+.faq-item.open .faq-a{max-height:600px;padding-bottom:24px}
+.faq-a p{font-size:16px;color:var(--muted);max-width:none}
+.cta-section{background:linear-gradient(135deg,rgba(201,151,58,.1) 0%,rgba(226,185,106,.04) 100%);border:1px solid rgba(201,151,58,.3);border-radius:24px;padding:80px 60px;text-align:center;margin:40px 0 60px}
+.cta-section h2{max-width:620px;margin:0 auto 20px}
+.cta-section p{margin:0 auto 36px;max-width:560px;font-size:17px}
+.cta-primary{display:inline-block;padding:20px 44px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:16px;box-shadow:0 12px 40px rgba(201,151,58,.3);transition:.2s}
+.cta-primary:hover{transform:translateY(-2px)}
+.cta-sign{margin-top:28px;font-size:14px;color:var(--gold-2);font-style:italic}
+.hero-cta-row{margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-outline{display:inline-block;padding:18px 36px;background:transparent;color:var(--gold-2);text-decoration:none;border:1px solid var(--line-2);border-radius:12px;font-weight:600;font-size:15px;transition:.2s}
+.cta-outline:hover{border-color:var(--gold-2)}
+.footer{padding:48px 0;border-top:1px solid var(--line);text-align:center}
+.footer p{margin:0 auto;font-size:13px;color:var(--muted);letter-spacing:.05em}
+@media(max-width:768px){.meta-grid{grid-template-columns:1fr}.cta-section{padding:50px 24px}.market-row{grid-template-columns:1fr;gap:8px}.phase-block{grid-template-columns:1fr;gap:8px}.proof-grid{grid-template-columns:1fr}.offer-block{padding:32px 24px}section{padding:60px 0}}
+.moat-callout{margin-top:32px;padding:32px 36px;background:linear-gradient(135deg,rgba(201,151,58,.08) 0%,rgba(226,185,106,.03) 100%);border:1px solid var(--line-2);border-radius:14px}
+.moat-eyebrow{font-size:11px;color:var(--gold-2);text-transform:uppercase;letter-spacing:.18em;font-weight:700;margin-bottom:12px}
+.moat-callout p{font-size:18px;color:var(--text);margin:0;max-width:none;line-height:1.6}
+.moat-callout p strong{color:var(--gold-2)}
+.agenda-block{padding:40px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.agenda-item{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+.agenda-item:last-child{border-bottom:0;padding-bottom:0}
+.agenda-item:first-child{padding-top:0}
+.agenda-time{font-family:monospace;color:var(--gold-2);font-weight:700;font-size:14px;letter-spacing:.05em;padding-top:4px}
+.agenda-content h4{font-size:16px;color:var(--text);text-transform:none;letter-spacing:0;margin:0 0 6px;font-weight:600}
+.agenda-content p{color:var(--muted);font-size:14px;margin:0;max-width:none;line-height:1.5}
+.contrast-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.contrast-card{padding:36px;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px}
+.contrast-card.current{opacity:.7}
+.contrast-card.future{border-color:var(--line-2);background:linear-gradient(180deg,rgba(201,151,58,.06) 0%,var(--bg-2) 100%)}
+.contrast-tag{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px;display:inline-block}
+.contrast-card.current .contrast-tag{background:rgba(166,152,133,.15);color:var(--muted);border:1px solid rgba(166,152,133,.3)}
+.contrast-card.future .contrast-tag{background:rgba(201,151,58,.15);color:var(--gold-2);border:1px solid rgba(201,151,58,.3)}
+.contrast-card h3{margin-bottom:18px;font-size:20px}
+.contrast-card ul{list-style:none;padding:0;margin:0}
+.contrast-card li{padding:8px 0 8px 22px;position:relative;color:var(--muted);font-size:15px;line-height:1.6}
+.contrast-card.current li::before{content:'';width:6px;height:6px;background:var(--muted);border-radius:50%;position:absolute;left:0;top:14px;opacity:.5}
+.contrast-card.future li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;position:absolute;left:0;top:14px}
+.premium-table{margin-top:24px;border-color:var(--line-2)!important;background:linear-gradient(180deg,rgba(201,151,58,.04) 0%,var(--bg-2) 100%)!important}
+.premium-eyebrow{display:inline-block;padding:5px 14px;background:rgba(201,151,58,.15);border:1px solid var(--line-2);border-radius:24px;font-size:11px;font-weight:700;color:var(--gold-2);letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+.asset-table{background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;padding:8px 32px;margin-top:8px}
+.asset-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.asset-row:last-child{border-bottom:0}
+.asset-row.asset-header{padding:24px 0 18px}
+.asset-col-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+.asset-col-label.asset-built-label{color:var(--gold-2)}
+.asset-cat{font-size:14px;color:var(--muted);font-weight:500}
+.asset-val{font-size:17px;font-weight:600}
+.asset-today{color:var(--muted);opacity:.75}
+.asset-built{color:var(--gold-2)}
+.anti-hype{margin-top:32px;padding:32px 36px;background:rgba(0,0,0,.18);border:1px dashed var(--line-2);border-radius:14px}
+.anti-hype-eyebrow{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;font-weight:700;margin-bottom:18px}
+.anti-hype-list{list-style:none;padding:0;margin:0 0 20px}
+.anti-hype-list li{padding:6px 0 6px 26px;position:relative;color:var(--muted);font-size:15px;line-height:1.6}
+.anti-hype-list li::before{content:'×';position:absolute;left:0;top:2px;color:var(--red);font-size:20px;font-weight:700;line-height:1}
+.anti-hype p{font-size:15px;color:var(--text);margin:0;max-width:none;line-height:1.7}
+.anti-hype p strong{color:var(--gold-2)}
+.call-agenda{text-align:left;max-width:520px;margin:0 auto 32px;display:grid;gap:14px}
+.call-agenda-item{display:grid;grid-template-columns:32px 1fr;gap:16px;align-items:start}
+.call-agenda-num{font-family:monospace;color:var(--gold-2);font-weight:700;font-size:14px;padding-top:2px}
+.call-agenda-text{color:var(--text);font-size:15px;line-height:1.6}
+@media(max-width:768px){.contrast-grid{grid-template-columns:1fr}.agenda-block{padding:28px 20px}.agenda-item{grid-template-columns:1fr;gap:4px}.moat-callout{padding:24px}.asset-table{padding:8px 20px}.asset-row{grid-template-columns:1fr;gap:6px;padding:14px 0}.asset-row.asset-header{display:none}.asset-cat{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold-2)}.anti-hype{padding:24px}}
+.floating-cta{position:fixed;bottom:24px;right:24px;padding:16px 28px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-2) 100%);color:#0a0805;text-decoration:none;border-radius:12px;font-weight:700;font-size:14px;box-shadow:0 12px 40px rgba(201,151,58,.4);z-index:1000;transition:.2s}
+.floating-cta:hover{transform:translateY(-2px)}
+@media(max-width:768px){.floating-cta{bottom:16px;right:16px;padding:14px 22px;font-size:13px}}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.result-card{padding:32px 24px;background:linear-gradient(180deg,rgba(201,151,58,.08) 0%,var(--bg-2) 100%);border:1px solid var(--line-2);border-radius:14px;text-align:center}
+.result-stat{font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-3) 50%,var(--gold-2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:monospace;letter-spacing:-.02em;margin-bottom:10px;line-height:1.05}
+.result-label{font-size:13px;color:var(--muted);line-height:1.5;letter-spacing:.02em}
+.proof-images{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.proof-figure{margin:0;background:linear-gradient(180deg,var(--surface) 0%,var(--bg-2) 100%);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.proof-figure img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+.proof-figure figcaption{padding:18px 22px;font-size:13px;color:var(--gold-2);letter-spacing:.04em;text-align:center;font-weight:600}
+.proof-disclaimer{margin-top:24px;padding:16px 22px;border:1px dashed var(--line-2);border-radius:10px;font-size:13px;color:var(--muted);text-align:center;letter-spacing:.02em}
+.proof-disclaimer strong{color:var(--gold-2);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+@media(max-width:768px){.results-grid{grid-template-columns:1fr 1fr}.proof-images{grid-template-columns:1fr}.result-stat{font-size:28px}}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-inner">
+<div class="logo">AG1 Consulting</div>
+<a href="https://calendly.com/ag-copy/call-with-andrei" class="nav-cta" target="_blank">Book A Call</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+<div class="eyebrow reveal">Built For Tax Goddess</div>
+<h1 class="reveal">Built For <em>Shauna Wekherlien</em><br>AG1 Consulting</h1>
+<p class="reveal">Tax Goddess is live. The $2.03B+ client savings number is the strongest authority claim in the personal-finance / tax niche. The 85-person team is delivering. The Strategic Tax Coaching, Advancement, and Mastery tiers all run. The info-product entry tier that captures the pre-services audience and the warm-up funnel that brings warmer leads to the consultation are not yet built.</p>
+<div class="meta-grid reveal">
+<div class="meta-item"><div class="meta-label">Client tax savings</div><div class="meta-value">$2.03B+</div></div>
+<div class="meta-item"><div class="meta-label">Strategies in stack</div><div class="meta-value">1,800+</div></div>
+<div class="meta-item"><div class="meta-label">Avg client tax rate</div><div class="meta-value">6.92%</div></div>
+<div class="meta-item"><div class="meta-label">Entry-tier opportunity</div><div class="meta-value">$150K+/yr</div></div>
+</div>
+<div class="hero-cta-row reveal">
+<a href="https://calendly.com/ag-copy/call-with-andrei" target="_blank" class="cta-primary" style="padding:18px 40px;font-size:16px;border-radius:12px;box-shadow:0 12px 40px rgba(201,151,58,.3)">Book A Call →</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container-narrow"><h2 class="reveal">Why This Page Exists</h2>
+<div class="prose reveal">
+<p>You've already done the hard part. Most tax strategists don't have an 85-person team, $2.03B+ in client tax savings, an average client tax rate of 6.92%, a stack of 1,800+ IRS-approved strategies, four cheat-sheet lead magnets working at scale, a press shelf, and a published author credit. You do.</p>
+<p>taxgoddess.com is live. The Strategic Tax Coaching, Tax Strategy Advancement, and Tax Strategy Mastery tiers all run. Free consultations book daily. The cheat sheets capture warm intent. The case-study videos quantify the result. <strong>$2.03 billion in client tax savings. Top 1% of Certified Tax Coaches and Strategists. 85+ specialists on the team.</strong> The IP is locked, the credentials are dialled, the audience is real.</p>
+<p>So this page is not a "you need a website" pitch. You're past that.</p>
+<blockquote>"Elevate your tax strategy to a pinnacle of efficiency, unlock a mere 6% annual tax rate."<span class="quote-attr">- taxgoddess.com, your own positioning</span></blockquote>
+<p>That line is the proof. The pitch this page makes is that the funnel above the proof has unfilled tiers below the consultation, and three specific gaps are visible from outside.</p>
+<p>This page is the version that lands when the services firm is already running at scale. After studying the public surfaces (taxgoddess.com, the Strategic Tax Coaching landing, the Tax Strategy Advancement and Mastery tiers, the cheat-sheet opt-ins, the YouTube case-study videos, the @thetaxgoddess feed), three specific leak points are visible from outside. None of them are foundation-level. All three are the kind of revenue lift that compounds inside a services firm already converting consultations to clients.</p>
+<p>And here's the strategic timing. The tax-strategy space is contested. Every quarter another CPA launches an ebook or "tax planning workshop" citing back the Wheelwright / Kohler model. The window for the operator running the $2B-saved authority claim with the 85-person team to capture the info-product layer underneath the consultation funnel is open right now. <strong>Operators with services-firm scale and case-study proof get to charge a different number than CPAs running a solo practice and a $97 ebook.</strong></p>
+<p>The build below is sized for that. Conservative numbers. Phased over four months. Built around the services firm you already run, not against it.</p>
+<div class="signature">- Andrei | AG1 Consulting</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">The Leak Points</div>
+<h2 class="reveal">Three Places The Funnel Currently Underconverts</h2>
+<p class="section-sub reveal">All publicly observable on taxgoddess.com, the cheat-sheet flow, the consultation booking, and the YouTube case-study videos. Nothing fabricated about backend systems we can't see.</p>
+
+<div class="gap-grid">
+<div class="gap-card reveal">
+<span class="gap-tag critical">Critical</span>
+<h3>No Info-Product Entry Tier Capturing The Pre-Services Audience</h3>
+<p>The lowest service tier (Strategic Tax Coaching) starts at the $200K-$1M revenue band. Entrepreneurs at $50K-$200K revenue — the warm pre-qualified audience that follows @thetaxgoddess content, downloads the cheat sheets, watches the YouTube case studies, reads the book — have no path. They're either too small for STC or the price is wrong for their stage. They get one cheat-sheet email and bounce. With <strong>$2.03B in client tax savings, an 85-person team, and 1,800+ IRS-approved strategies</strong>, the framework you teach STC clients is the most credentialled tax-strategy IP in the niche. Other operators at your stage of authority (Tom Wheelwright with WealthAbility books, Mark Kohler with Main Street Tax Pro courses, Karlton Dennis with self-paced education) all run an info-product entry tier underneath their advisory work. Yours has been earned. It's just not built. The pre-$200K audience either churns back into the cheat-sheet drip or gets left without a structured upgrade path that brings them into STC when they cross the revenue threshold.</p>
+<div class="fix"><strong>The Lift</strong>The Tax Strategy Course at $497-$1,997. Self-paced, your voice, the framework you teach STC clients distilled for the pre-$200K operator. Sells warm off the cheat-sheet email list and the @thetaxgoddess content. Captures revenue from a segment currently lost to "they're too small for STC." Course alumni upgrade into STC when they cross the revenue threshold, warmer than any cold consultation lead.</div>
+</div>
+
+<div class="gap-card reveal">
+<span class="gap-tag critical">Critical</span>
+<h3>Free Consultation As The Single Conversion Event Across All Service Tiers</h3>
+<p>Every paid offer routes through "Book A Free Consultation." For an 85-person services firm, that's expensive at the call layer — every booked consultation costs team time whether or not it converts. The current cheat-sheet-to-consultation handoff has no warm-up step in between. A 30-minute on-demand workshop or 5-day email course between cheat-sheet opt-in and consultation booking would cut the call-volume cost while raising the conversion rate of the calls that do happen. Buyers who self-disqualify in the workshop never book the call (saving team time). Buyers who self-qualify book the call already pre-sold on the framework (raising close rate). <strong>For a services firm at your scale, the cost-per-consultation is the highest-leverage operational lever available.</strong></p>
+<div class="fix"><strong>The Lift</strong>A 30-minute on-demand workshop ("3 Tax Strategies The 6.92% Tax Rate Clients Use") gating the consultation booking. Email sequence around it. Filters cold leads, warms qualified ones. Cost per consultation drops, close rate rises. Cheat-sheet opt-ins funnel through the workshop into the consultation, not directly into the consultation.</div>
+</div>
+
+<div class="gap-card reveal">
+<span class="gap-tag high">High Impact</span>
+<h3>$2.03B+ Authority Claim Above The Fold But No Homepage VSL Connecting It To The Buyer Path</h3>
+<p>The "$2.03 Billion+" client savings number is the strongest authority claim in the entire tax-strategy niche. The case-study videos exist on YouTube. The 6.92% average client tax rate is quantified. There's no 6-10 minute VSL on the homepage tying that authority into the STC consultation path. The buyer who would convert if shown a structured walkthrough of "here's how the $2B was generated, here's what STC actually does inside the 6.92% tax rate clients, here's the consultation format, here's who it's for" never gets that walkthrough. They land, see the press shelf and the $2B number, browse the cheat sheets, and bounce. <strong>The proof is the strongest in the niche. The bridge from proof to enrollment is missing.</strong></p>
+<div class="fix"><strong>The Lift</strong>6-10 minute homepage VSL gating the consultation CTA. Walkthrough format, your voice, the $2B proof integrated into the script, three of the existing case study videos referenced explicitly, the STC and Advancement and Mastery tiers explained, the consultation format previewed. The cheat sheets stay. The VSL converts the slice of warm traffic that currently bounces.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">Market Context</div>
+<h2 class="reveal">Where Operators At Your Tier Are Already Pricing</h2>
+<p class="section-sub reveal">Four peers in the tax-strategy / advisory niche. The info-product entry tier underneath the advisory work is established. None of them publicly own the $2.03B claim, the 85-person team, or the 6.92% average client tax rate.</p>
+
+<div class="market-table">
+<div class="market-row reveal">
+<div>
+<div class="market-name">Tom Wheelwright (WealthAbility)</div>
+<div class="market-price">Books $20-$30 · Advisor network premium tier above</div>
+</div>
+<div class="market-note">Direct comp on services-firm-with-info-product-entry architecture. Tax-Free Wealth book at the entry tier with the WealthAbility CPA referral network above. Same buyer profile, same ascension pattern. Different in mechanism (referral network not direct services) but exact match on the entry-tier-to-advisory pattern. Proves the market accepts an info-product entry layer underneath the advisory work.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Mark Kohler (Main Street Tax Pro)</div>
+<div class="market-price">Course tier + advisor referral network</div>
+</div>
+<div class="market-note">Tax attorney + CPA running a course tier underneath the advisory work, plus an advisor referral network. Course captures the pre-services entrepreneur, network captures the warmer post-course buyer. Different in legal-and-tax dual hat but the funnel architecture is exactly what's missing here.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Karlton Dennis</div>
+<div class="market-price">Self-paced education tier + advisor network</div>
+</div>
+<div class="market-note">Tax strategist running self-paced education at the entry tier with advisor referrals above. Different in scale and audience demographic but proves the entry-tier-to-advisor pattern works in the millennial entrepreneur segment that overlaps with @thetaxgoddess.</div>
+</div>
+
+<div class="market-row reveal">
+<div>
+<div class="market-name">Mid-tier solo CPAs (e.g., Hector Garcia)</div>
+<div class="market-price">$97-$497 ebooks + niche QuickBooks training</div>
+</div>
+<div class="market-note">Not a price-tier comp. A trajectory comp showing how single-operator CPAs run the entry-tier playbook. They lack the team, the case-study volume, and the proof block to charge premium pricing. The entry tier matters more for them; the upgrade path matters less. Tax Goddess is the inverse: the upgrade path is built, the entry tier isn't.</div>
+</div>
+</div>
+
+<div class="market-callout reveal">
+Every name above runs an info-product entry tier underneath their advisory work. $497-$1,997 is a market-rate ceiling for tax-strategy self-paced courses specifically, not a stretch. None of them publicly own <strong>$2.03B in client tax savings, an 85-person team, an average client tax rate of 6.92%, and the press shelf you carry</strong>. The Tax Strategy Course positioning is not invented. It's the slot the market already prices, just unfilled by you.
+</div>
+
+<div class="moat-callout reveal">
+<div class="moat-eyebrow">Your Moat, In One Sentence</div>
+<p>The Tax Goddess proof block is yours. Not "another tax strategist," not "another CPA with a course." <strong>An 85-person services firm with $2.03B in documented client tax savings, an average client tax rate of 6.92%, and a stack of 1,800+ IRS-approved strategies that single-operator CPAs structurally cannot replicate.</strong> Every newer tax coach launching a $97 ebook is teaching off six months of LinkedIn posts. The entry tier underneath all of them is not for someone copying the niche. It's for the operator who's already at $2B saved and already runs the firm.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">Asset Ownership</div>
+<h2 class="reveal">What Each 1,000 Cheat-Sheet Opt-Ins Actually Produces</h2>
+<p class="section-sub reveal">Same lead-magnet traffic. Same audience. Different number of conversion events the asset triggers downstream once the entry tier and the workshop pre-frame are built.</p>
+
+<div class="asset-table reveal">
+<div class="asset-row asset-header">
+<div></div>
+<div class="asset-col-label">Per 1,000 cheat-sheet opt-ins today</div>
+<div class="asset-col-label asset-built-label">Per 1,000 cheat-sheet opt-ins in this build</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">Pre-services entry path</div>
+<div class="asset-val asset-today">None</div>
+<div class="asset-val asset-built">Tax Strategy Course at $497-$1,997</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">Workshop pre-frame seen</div>
+<div class="asset-val asset-today">None</div>
+<div class="asset-val asset-built">Yes (gates consultation booking)</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">Email nurture between opt-in and consultation</div>
+<div class="asset-val asset-today">Single drip</div>
+<div class="asset-val asset-built">Stage-banded sequence</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">Consultation cost per booked call</div>
+<div class="asset-val asset-today">High (every opt-in funnels in)</div>
+<div class="asset-val asset-built">Lower (workshop pre-qualifies)</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">STC enrollment rate post-consultation</div>
+<div class="asset-val asset-today">Cold-call conversion</div>
+<div class="asset-val asset-built">Workshop-warmed conversion</div>
+</div>
+<div class="asset-row">
+<div class="asset-cat">Pre-$200K segment</div>
+<div class="asset-val asset-today">Lost (too small for STC)</div>
+<div class="asset-val asset-built">Captured by Course, upgrades into STC at threshold</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">The System</div>
+<h2 class="reveal">Four Levers We'd Pull With You</h2>
+<p class="section-sub reveal">Optimisation and ascension, not introduction. Every lever plugs into infrastructure you already operate. Nothing here asks you to rebuild Tax Goddess, restructure the team, or change the service tiers.</p>
+
+<div class="phase-block reveal">
+<div class="phase-num">Lever 01<span class="month">Month 1</span></div>
+<div class="phase-content">
+<h3>VSL Pre-Frame + On-Demand Workshop + Stage-Banded Nurture</h3>
+<p style="margin-bottom:14px">First month builds the warm-up layer the consultation funnel currently lacks. The VSL on the homepage converts the warm-but-stuck cheat-sheet opt-in who never books the consultation. The on-demand workshop pre-qualifies the lead before the call. The stage-banded nurture replaces the broadcast cheat-sheet drip with sequencing tied to where the lead is on the revenue ladder.</p>
+<ul>
+<li>VSL built and embedded on taxgoddess.com homepage above the consultation CTA (8-12 minute walkthrough of the $2B proof, the 6.92% framework, the STC tier, real client outcomes from existing case-study videos)</li>
+<li>30-minute on-demand workshop ("3 Tax Strategies The 6.92% Tax Rate Clients Use") gating the consultation booking</li>
+<li>Stage-banded nurture sequences: three buyer stages (pre-$200K, $200K-$1M, $1M+) with 8-12 emails each tied to where the cheat-sheet opt-in placed the buyer</li>
+<li>Cheat-sheet form integration: each opt-in tags the lead by stage and routes them to the matching nurture, not the broadcast drip</li>
+<li>A/B test instrumentation built in from day one so we measure the lift, not hope for it</li>
+<li>Dashboard live for VSL completion rate, workshop completion rate, consultation booking rate post-workshop, STC enrollment rate post-consultation</li>
+</ul>
+<div class="rev-line"><strong>Outcome</strong>Two compounding revenue lifts (workshop-warmed consultation conversion + reduced cost per booked call) layered onto the existing services funnel. Conservative incremental lift compounds inside the funnel from week four onward, scaling further as Levers 02-04 ship.</div>
+</div>
+</div>
+
+<div class="phase-block reveal">
+<div class="phase-num">Lever 02<span class="month">Month 2</span></div>
+<div class="phase-content">
+<h3>Entry Tier Launch (The Tax Strategy Course)</h3>
+<p style="margin-bottom:14px">Lever 02 introduces the $497-$1,997 self-paced course positioned as the entry tier underneath Strategic Tax Coaching. Captures the pre-$200K audience currently lost. Sells warm off the cheat-sheet email list and the @thetaxgoddess content. Course alumni upgrade into STC when they cross the revenue threshold, warmer than any cold consultation lead. The first cohort of course buyers lands the largest single new revenue line in the build.</p>
+<ul>
+<li>Tax Strategy Course curriculum built (8-12 modules), recorded in your voice, distilled from the framework you teach STC clients</li>
+<li>Course sales page live at courses.taxgoddess.com (or equivalent subdomain)</li>
+<li>Application screen calibrated to "$50K-$200K revenue, ready for self-paced strategy implementation"</li>
+<li>Email sequence from cheat-sheet opt-in into Course pitch, with stage-banded ladder for the pre-$200K segment</li>
+<li>Tier-upgrade sequence from Course alumni into STC when they cross the $200K threshold</li>
+<li>Course-completer case study capture infrastructure (testimonial requests at curriculum milestones)</li>
+<li>Course recordings repurposed into @thetaxgoddess content and consultation pre-call material</li>
+</ul>
+<div class="rev-line"><strong>Revenue Model</strong>100-250 buyers/yr @ $497-$1,997 &nbsp;·&nbsp; Conservative incremental: ~$150-$400K/yr direct + STC upgrade pipeline from Course alumni. Sells warm off the existing cheat-sheet list.</div>
+</div>
+</div>
+
+<div class="phase-block reveal">
+<div class="phase-num">Lever 03<span class="month">Month 3</span></div>
+<div class="phase-content">
+<h3>Paid Acquisition Layer On Top Of Organic + Cheat Sheets</h3>
+<p style="margin-bottom:14px">By Lever 03 the warm-up layer is live (Lever 01) and the entry tier is producing case studies and revenue (Lever 02). Now the Lever 03 paid layer compounds against a funnel that converts measurably better than it did 90 days ago. Meta retargeting against cheat-sheet downloaders and YouTube case-study viewers primary. YouTube pre-roll on adjacent tax-strategy creators. LinkedIn for STC tier specifically (mid-career entrepreneur audience).</p>
+<ul>
+<li>Paid Meta retargeting against cheat-sheet downloaders, video viewers, and existing email list</li>
+<li>YouTube pre-roll on adjacent tax-strategy creators (Karlton Dennis, Mark Kohler, Robert Kiyosaki ecosystem)</li>
+<li>LinkedIn campaign for the STC tier specifically (mid-career professional / business owner audience above $200K)</li>
+<li>Bank of 20-30 static and video ads sourced from existing case-study clips and @thetaxgoddess content</li>
+<li>Daily creative iteration, weekly performance review, monthly budget reallocation</li>
+<li>UTM and pipeline attribution layered into the dashboard from Lever 01</li>
+</ul>
+<div class="rev-line"><strong>Revenue Model</strong>Compounds Lever 01 + 02 lift. Conservative ROAS 3-5x on retargeting against cheat-sheet downloaders / video viewers / Course buyers. Spend scales with measured conversion, not hope.</div>
+</div>
+</div>
+
+<div class="phase-block reveal">
+<div class="phase-num">Lever 04<span class="month">Month 4+</span></div>
+<div class="phase-content">
+<h3>Retention + Ascension Loop</h3>
+<p style="margin-bottom:14px">Lever 04 closes the loop. The Course alumni community produces recurring revenue, referrals seed STC intake, and the retention layer feeds back into the cheat-sheet funnel and the consultation booking. By month six the system runs on its own compound, with the build team in monitoring rather than build mode.</p>
+<ul>
+<li>Tax Strategy Alumni community for Course graduates ($47-$97/mo) with monthly Q&amp;A, peer accountability, and curriculum updates</li>
+<li>Referral and affiliate structure for past STC clients to bring in next-cohort Course buyers</li>
+<li>Tier-upgrade flow from Course alumni into STC when they cross the revenue threshold</li>
+<li>Quarterly "state of tax strategy" content drop to the alumni community, repurposed publicly afterwards</li>
+<li>Lifecycle email infrastructure across cheat-sheet opt-ins, Course buyers, Alumni, and STC clients</li>
+</ul>
+<div class="rev-line"><strong>Revenue Model</strong>Recurring monthly community at scale plus repeat-buyer revenue. Ramps month four onward, becomes the durability layer underneath the Course revenue.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container-narrow">
+<div class="eyebrow reveal">Sample</div>
+<h2 class="reveal">Inside The Tax Strategy Course</h2>
+<p class="section-sub reveal">Eight-module self-paced curriculum, recorded in your voice, distilled from the framework you teach STC clients. Calibrated to the $50K-$200K revenue operator who will upgrade into STC when they cross the threshold.</p>
+
+<div class="agenda-block reveal">
+<div class="agenda-item">
+<div class="agenda-time">M1</div>
+<div class="agenda-content">
+<h4>The 6.92% Framework</h4>
+<p>How the average Tax Goddess client gets to a 6.92% effective tax rate. The four pillars, the order they get applied in, why most tax planning misses the order.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M2</div>
+<div class="agenda-content">
+<h4>Entity Structure For The Pre-$200K Operator</h4>
+<p>S-corp vs LLC vs sole prop math at the $50K-$200K revenue band. The thresholds where the entity choice actually moves the tax line. The mistakes that cost the next $50K of revenue in extra tax.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M3</div>
+<div class="agenda-content">
+<h4>Top 30 Deductions The Pre-$200K Operator Misses</h4>
+<p>The deductions that compound: home office, vehicle, retirement, family employment, R&amp;D credit, accountable plan. With the actual line numbers, the documentation requirements, and the audit-defense framing.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M4</div>
+<div class="agenda-content">
+<h4>Retirement Stack As A Tax Lever</h4>
+<p>Solo 401(k), SEP-IRA, defined benefit plans for the high-income solo. How the contribution stack moves the tax line at the $100K-$300K income band, and the multi-year compounding that turns it into a wealth-building lever, not just a tax-avoidance lever.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M5</div>
+<div class="agenda-content">
+<h4>Real Estate As A Tax Strategy</h4>
+<p>Cost segregation, bonus depreciation, real estate professional status, short-term rental loopholes. How real-estate-as-tax-strategy works for the operator who isn't yet a full-time real-estate investor.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M6</div>
+<div class="agenda-content">
+<h4>R&amp;D, Section 179, Bonus Depreciation Stack</h4>
+<p>The capex side of the tax stack. When to time equipment purchases, when to use the R&amp;D credit, when bonus depreciation actually beats Section 179. With the worked examples for the pre-$200K operator.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M7</div>
+<div class="agenda-content">
+<h4>Audit Defense And Documentation</h4>
+<p>The documentation discipline that makes every above-the-line strategy defensible. The records, the contemporaneous logs, the bookkeeping infrastructure. Why most aggressive tax strategies fail at audit, and how Tax Goddess clients structure documentation to make audits a non-event.</p>
+</div>
+</div>
+<div class="agenda-item">
+<div class="agenda-time">M8</div>
+<div class="agenda-content">
+<h4>The Upgrade Path To STC</h4>
+<p>Where the self-paced framework caps and where Strategic Tax Coaching takes over. The revenue threshold where a multi-strategy plan needs human implementation. The Course-to-STC handoff for the alumni who've crossed the line.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">Revenue Projection</div>
+<h2 class="reveal">What This Adds On Top Of What You Already Run</h2>
+<p class="section-sub reveal">Incremental year-one lift, layered on top of current STC, Advancement, and Mastery revenue. None of these numbers cannibalise the existing services funnel.</p>
+
+<div class="rev-table reveal">
+<div class="rev-row">
+<div class="rev-stream"><strong>Lever 01: VSL pre-frame + on-demand workshop + nurture</strong>Workshop-warmed consultation conversion + reduced cost per booked call + recovered cheat-sheet segment</div>
+<div class="rev-amount">~$50,000+</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Lever 02: Tax Strategy Course (entry tier)</strong>100 buyers/yr avg @ $1,497 direct + STC upgrade pipeline from alumni</div>
+<div class="rev-amount">$150,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Levers 03 + 04: Paid Layer + Alumni Community</strong>Ramps month 4-6 onward</div>
+<div class="rev-amount">upside</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-label">Year-One Floor (Incremental)</div>
+<div class="rev-total-amount">~$200K</div>
+</div>
+<div class="rev-caveat"><strong>How we got here</strong>Conservative math: a homepage VSL plus on-demand workshop converts a meaningful slice of the warm cheat-sheet traffic that bounces today before booking the consultation. Course at the lower end of the $497-$1,997 range, 100 buyers in year one. STC upgrade pipeline from Course alumni is incremental to existing STC enrollment. Real numbers calibrate against your actual cheat-sheet opt-in volume + STC close rate on the call.</div>
+</div>
+
+<div class="rev-note reveal">
+This is <strong>incremental on top of</strong> your existing Tax Goddess revenue, not a replacement. Lever 01 reduces cost per consultation while raising close rate. The Course is a tier you don't currently sell. The paid layer and alumni community are durability layers that ramp into year two.
+</div>
+
+<div class="rev-table premium-table reveal">
+<div class="premium-eyebrow">Premium-Only Ceiling</div>
+<p style="color:var(--muted);font-size:15px;margin-bottom:20px;max-width:none">Same plan, dialled up. Higher Lever 01 conversion lift, premium-tier Course pricing, paid layer running at scale by month six.</p>
+<div class="rev-row">
+<div class="rev-stream"><strong>Lever 01 (premium lift)</strong>Higher VSL + workshop conversion + deeper segmented nurture across cheat-sheet and YouTube audiences</div>
+<div class="rev-amount">~$120,000+</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Tax Strategy Course (premium)</strong>250 buyers/yr avg @ $1,997 direct + larger STC upgrade pipeline</div>
+<div class="rev-amount">$500,000</div>
+</div>
+<div class="rev-row">
+<div class="rev-stream"><strong>Alumni Community + Paid Layer (mature)</strong>Months 6-12 ramp</div>
+<div class="rev-amount">$120,000+</div>
+</div>
+<div class="rev-total">
+<div class="rev-total-label">Year-One Ceiling (Incremental)</div>
+<div class="rev-total-amount">~$740K</div>
+</div>
+<div class="rev-caveat"><strong>How we got here</strong>Premium math: deeper VSL + workshop conversion (sharper script, harder proof block), 250 Course buyers at the top of the $1,997 range, alumni community at 400-700 paying members by month 12. Real numbers calibrate to your actual conversion baselines on the call.</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="eyebrow reveal">The Picture</div>
+<h2 class="reveal">Two Versions Of December 2026</h2>
+<p class="section-sub reveal">Same starting point. Same brand. Different operating system underneath.</p>
+
+<div class="contrast-grid">
+<div class="contrast-card current reveal">
+<div class="contrast-tag">If Nothing Changes</div>
+<h3>Q4 2026, Status Quo</h3>
+<ul>
+<li>taxgoddess.com still routes every cheat-sheet opt-in directly into the consultation booking with no warm-up step</li>
+<li>$2.03B authority claim still above the fold but no homepage VSL bridging it to the buyer path</li>
+<li>Pre-$200K audience still lost — too small for STC, no Course tier underneath</li>
+<li>Cost per booked consultation still high; close rate still calibrated to cold leads</li>
+<li>Cheat-sheet drip still broadcast, not stage-banded by revenue stage</li>
+<li>Newer tax coaches continuing to launch $97 ebooks citing the Tax Goddess model back at you</li>
+</ul>
+</div>
+<div class="contrast-card future reveal">
+<div class="contrast-tag">If We Build This</div>
+<h3>Q4 2026, System Live</h3>
+<ul>
+<li>VSL on the homepage converting warm cheat-sheet traffic into the workshop and through into the consultation</li>
+<li>30-minute on-demand workshop pre-qualifying every consultation booking, lowering cost per call and raising close rate</li>
+<li>Tax Strategy Course capturing the pre-$200K audience, with structured upgrade path into STC at the revenue threshold</li>
+<li>Stage-banded nurture replacing the broadcast cheat-sheet drip, three revenue tracks active</li>
+<li>Tax Strategy Alumni community billing recurring revenue every month</li>
+<li>Year-one incremental in the $200K-$740K+ range, conservative</li>
+<li>The entry tier underneath every cited-back-to-you tax course is yours, productised</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">Who's Building This</div>
+<h2 class="reveal">Operator-Led, Agent-Powered</h2>
+<p class="section-sub reveal">Direct accountability through Andrei. Backed by the most current AI agent stack on the market and a UK production network. The build moves at agent-velocity, not agency-velocity.</p>
+
+<div class="proof-grid">
+<div class="proof-card reveal">
+<h3>Andrei Givero</h3>
+<div class="role">Founder · AG1 Consulting</div>
+<p>UK-based operator. Background is direct-response copy, paid media, and high-ticket coaching launches. Specialty contributions: VSL scripting and production, segmented email infrastructure, paid retargeting against warm audiences, info-product entry-tier launches for established services firms. Direct point of accountability through the build, the launch, and the first revenue cycle.</p>
+</div>
+<div class="proof-card reveal">
+<h3>The AG1 Stack</h3>
+<div class="role">10+ AI Agents · UK Production Network</div>
+<p>AG1 ships with the most current AI agent stack on the market: 10+ purpose-built agents pre-deployed across VSL drafting, ad creative iteration, segmented email sequencing, audience research, copy review, and dashboard monitoring. Plus a UK-based production, editing, and paid-media network for the work that needs human hands. What takes a hand-rolled agency a quarter takes the AG1 stack a month, with the same operator on every call.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.04) 50%,transparent 100%)">
+<div class="container">
+<div class="eyebrow reveal">Verified Client Results</div>
+<h2 class="reveal">Receipts, Not Headlines</h2>
+<p class="section-sub reveal">One client. Six months. Oct 2025 - Mar 2026. Numbers below pulled from Stripe and revenue-attribution dashboards. Full screenshots below.</p>
+
+<div class="results-grid">
+<div class="result-card reveal"><div class="result-stat">$742K+</div><div class="result-label">Revenue generated, one client, 6 months</div></div>
+<div class="result-card reveal"><div class="result-stat">+101%</div><div class="result-label">Gross volume growth vs. prior period</div></div>
+<div class="result-card reveal"><div class="result-stat">+72%</div><div class="result-label">Total revenue growth vs. prior period</div></div>
+<div class="result-card reveal"><div class="result-stat">$306K</div><div class="result-label">Succeeded payments, single client window</div></div>
+</div>
+
+<div class="proof-images reveal">
+<figure class="proof-figure">
+<img src="proof/stripe-dashboard.png" alt="Stripe dashboard for the client window showing $331K gross volume, +101% period-on-period growth, $306,835.01 succeeded payments">
+<figcaption>Stripe · $331K gross volume · +101% period on period</figcaption>
+</figure>
+<figure class="proof-figure">
+<img src="proof/revenue-dashboard.png" alt="Revenue dashboard showing $742,715.59 total revenue, +72% period-on-period growth, attributed across Search, Campaigns, Social, and Other channels">
+<figcaption>Revenue dashboard · $742,715 total · +72% period on period</figcaption>
+</figure>
+</div>
+
+<div class="proof-disclaimer reveal"><strong>Note</strong> · Client identity withheld under NDA. Live screenshots and source dashboards walked through on the call.</div>
+</div>
+</section>
+
+<section>
+<div class="container-narrow">
+<div class="eyebrow reveal">The Offer</div>
+<h2 class="reveal">Here's What Working Together Looks Like</h2>
+<p class="section-sub reveal">Scope is fixed. Everything ships in the first 90 days. No add-ons sold separately, no surprise line items, no scope creep.</p>
+
+<div class="offer-block reveal">
+<h3>Scope</h3>
+<p class="scope-intro">Everything below is in. No retainer until the system produces. We come in for a 90-day build, hand you a launched optimisation layer, and walk you through how to run it without us if you'd rather take it in-house from there.</p>
+<ul class="scope-list">
+<li>Lever 01 warm-up layer: VSL on taxgoddess.com homepage, 30-min on-demand workshop gating consultation booking, stage-banded nurture, cheat-sheet form integration</li>
+<li>Lever 02 entry tier: Tax Strategy Course curriculum (8-12 modules), sales page, application screen, course-to-STC upgrade flow</li>
+<li>Lever 03 paid layer: Meta + YouTube + LinkedIn, 20-30 ad creatives in your voice, daily iteration</li>
+<li>Lever 04 retention loop: Tax Strategy Alumni community structure, referral architecture, tier-upgrade flows</li>
+<li>Workshop production for the on-demand pre-frame</li>
+<li>Course recording infrastructure and post-production pipeline</li>
+<li>Conversion dashboard live from week one (cheat-sheet to workshop, workshop to consultation, consultation to STC enrollment, Course buyer rate, paid ROAS)</li>
+<li>VSL and Course scripts written against your voice from the @thetaxgoddess content, the case-study videos, and the existing 1,800+ strategy library before filming</li>
+<li>All copy and creative reviewed against your published brand voice and the Tax Goddess editorial tone before publishing</li>
+<li>AG1's AI agent stack (10+ purpose-built agents) pre-deployed across the workflow: VSL drafting, ad iteration, email sequencing, audience research, copy review, dashboard monitoring</li>
+<li>Andrei on the calls through launch and the first full revenue cycle</li>
+</ul>
+<div class="price-note">Investment is set on the call once we agree the plan fits. No retainer until the system produces measurable lift.</div>
+</div>
+
+<div class="anti-hype reveal">
+<div class="anti-hype-eyebrow">What This Build Is Not</div>
+<ul class="anti-hype-list">
+<li>This is not a Tax Goddess rebuild. The brand works, we don't touch the editorial tone or the existing service tier structure.</li>
+<li>This is not a team restructure. Your 85-person team keeps doing what it does. We layer on top of the consultation funnel, not inside the delivery team.</li>
+<li>This is not a "make Shauna go on camera more" play. Your content cadence stays exactly where it is.</li>
+<li>This is not a six-figure-per-month-overnight pitch. The numbers above are conservative and they take a year to compound.</li>
+</ul>
+<p>What this build does promise is <strong>a homepage VSL bridging the $2.03B authority to the consultation, an on-demand workshop pre-qualifying every booked call, a Tax Strategy Course capturing the pre-$200K audience, and a system you own end-to-end after 90 days</strong>. That's the floor. The ceiling and the durability layer ramp from there.</p>
+</div>
+</div>
+</section>
+
+<section style="background:linear-gradient(180deg,transparent 0%,rgba(201,151,58,.03) 50%,transparent 100%)">
+<div class="container-narrow">
+<div class="eyebrow reveal">Questions</div>
+<h2 class="reveal">The Ones An Operator At Your Stage Asks</h2>
+<p class="section-sub reveal">Short, direct answers. The longer ones we cover on the call.</p>
+
+<div class="reveal">
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why would I run this with an outside operator instead of in-house?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>Because the team you have is already running the firm. The 85 specialists are delivering. The consultation calendar is being managed. The cheat-sheet content is being produced. Adding a 90-day build for a homepage VSL, an on-demand workshop, a self-paced course, and a paid acquisition layer on top of an already-loaded ops team is how those projects either get postponed by a year or get launched at half the quality. Outside operator is faster, cleaner, and exits when production hits steady state. We hand the system to your team after the launch cycle, not before.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much of my time does this need?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>Roughly half a day to record the homepage VSL. One day to record the on-demand workshop. Two days spread across a month to record the Tax Strategy Course modules (filmed in your existing recording setup). The rest is build team work plus you reviewing the copy, creative, and pricing decisions before they ship. Most operators at your stage spend under 8 hours a month during the 90-day build, and under 2 hours a month after the system is in production.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Will the Tax Strategy Course cannibalise STC?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>No. The Course and STC solve different problems for different audiences. The Course is for the $50K-$200K revenue operator who's too small for STC right now and would otherwise bounce. STC is for the $200K-$1M operator who needs human implementation. Most Course buyers will not be STC candidates today; they'll be STC candidates two years from now once they cross the revenue threshold. The Course captures revenue from a segment currently lost, builds the relationship, and creates a structured upgrade path into STC when they qualify. Different deliverable, different audience, different buying motion. The overlap is feature, not bug.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Won't the Course position Tax Goddess as "education" instead of "premium services"?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>The opposite, when positioned correctly. The Course is positioned as "the framework Tax Goddess clients use, distilled for the operator who's not yet at $200K revenue." The buyer learns the framework, sees the proof, and either implements it themselves at the pre-$200K stage or upgrades into STC when they cross the threshold. Tom Wheelwright runs Tax-Free Wealth alongside the WealthAbility CPA network. Mark Kohler runs courses alongside Main Street Tax Pro. Neither got "demoted" by the entry tier — they got expanded. The Course adds a tier, doesn't replace the firm.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does this work alongside my current team?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>The build team operates alongside your existing structure. Your 85-person delivery team keeps running. Your consultation calendar keeps booking. Your service tiers stay where they are. We layer on top: VSL pre-frame, workshop, Course, stage-banded nurture, paid layer, alumni community. The only meaningful interface point is Shauna on camera for the VSL, the workshop, and the Course recording. Everything else, we run autonomously and report back.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly is there real revenue?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>Lever 01 VSL and workshop: first measurable lift in week 4-6 once both ship. Lower cost per consultation + higher close rate measurable in week 5-7. Lever 02 first Course buyers from month 2-3, scaling through year one. Lever 03 paid layer starts producing measurable ROAS by month 4. Lever 04 alumni community ramps from month 4 onward. Most of the year-one incremental lands in months 4-12, not month one.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if the Course doesn't sell?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>The Course is sized for the warmest possible audience: cheat-sheet opt-ins who are pre-warmed by the @thetaxgoddess content and the existing case-study videos. If the first 30-day window under-sells (say, 10 buyers instead of 25), we don't push it harder into the same audience. We pause, sharpen the positioning, A/B test the Course pitch, and try again with a sharper segment. Build doesn't continue billing while the Course isn't producing. If after a second attempt the audience isn't there at the modelled price, we restructure the tier or move the budget into Lever 03 paid acquisition for the existing services funnel.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if I want to stop after a Lever?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>You can stop at any Lever. After Lever 01 you own the homepage VSL, the on-demand workshop, the stage-banded nurture as standalone lifts on your existing consultation funnel. After Lever 02 you own the Tax Strategy Course curriculum, sales page, application flow, and the first revenue from buyers. After Lever 03 you own the paid acquisition system. Each Lever stands on its own as a fully shipped asset in case the rest stops being interesting to you.</p></div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why AG1 and not a larger agency?<div class="faq-toggle"></div></div>
+<div class="faq-a"><p>Two reasons. First, the build is specific. Most agencies sell the same growth playbook to every client (more ads, more content, more funnels). The work here is precise: a homepage VSL bridging the $2B proof to the consultation, an on-demand workshop pre-qualifying calls, an info-product entry tier capturing the pre-$200K audience, a paid layer on top of a cheat-sheet engine that already converts. Second, AG1 runs on the most current AI agent stack on the market: 10+ purpose-built agents pre-deployed across VSL drafting, ad creative iteration, segmented email sequencing, audience research, and copy review. The AG1 stack does in days what a 6-person hand-rolled agency does in weeks. You get the build velocity of a 10-person team with one direct point of accountability and no account-management layer between you and the work. If a larger agency is preferable after the call, that's a fair conversation. The plan above lands the same either way.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="cta-section reveal">
+<div class="eyebrow">Next Step</div>
+<h2>Twenty Minutes. Four Topics.<br>You Decide From There.</h2>
+<p style="margin-bottom:24px">Here's exactly what we cover on the call, in order.</p>
+<div class="call-agenda">
+<div class="call-agenda-item"><span class="call-agenda-num">01</span><span class="call-agenda-text">Which leak point we touch first, calibrated to your team's current roadmap and the consultation booking volume.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">02</span><span class="call-agenda-text">Tax Strategy Course pricing tier, curriculum scope, and how it integrates with the cheat-sheet to STC funnel.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">03</span><span class="call-agenda-text">Timing, kickoff date, and what your time commitment actually looks like over the 90-day build.</span></div>
+<div class="call-agenda-item"><span class="call-agenda-num">04</span><span class="call-agenda-text">What gets built, what stays in-house with your existing team, and what happens after the 90 days are up.</span></div>
+</div>
+<p style="margin-bottom:36px">The plan above is built around the services firm you already run. The numbers are conservative. The leak points are observable from outside. The only outstanding decision is whether the lift is worth a 20-minute conversation.</p>
+<a href="https://calendly.com/ag-copy/call-with-andrei" class="cta-primary" target="_blank">Book A Call</a>
+<div class="cta-sign">- Andrei | AG1 Consulting</div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<p>Built by AG1 Consulting · This page was created exclusively for Shauna Wekherlien · April 2026</p>
+</div>
+</footer>
+
+<a href="https://calendly.com/ag-copy/call-with-andrei" target="_blank" class="floating-cta">Book A Call</a>
+
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
